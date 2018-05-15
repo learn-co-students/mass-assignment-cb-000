@@ -3,10 +3,14 @@ class Person
                 :weight, :handed, :complexion, :t_shirt_size, 
                 :wrist_size, :glove_size, :pant_length, :pant_width
                 
-  def initialize(attributes)
+  def initialize(attributes=nil)
     # Use only the attribute keys passed into Person.new
-    attributes.each do |key, value|
-      self.send( ("#{key}="), value )
+    # Attributes are optional
+    
+    if attributes
+      attributes.each do |key, value|
+        self.send( ("#{key}="), value )
+      end
     end
   end
 end
