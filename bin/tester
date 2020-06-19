@@ -1,0 +1,7 @@
+require_relative "../lib/person.rb"
+
+john_info = {height: 100}
+
+john = Person.new(john_info)
+
+puts john.height
